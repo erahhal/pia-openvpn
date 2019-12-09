@@ -1,0 +1,34 @@
+[connection]
+id={{ name }}
+uuid={{ uuid }}
+type=vpn
+permissions=
+timestamp=1575873425
+
+[vpn]
+auth=sha1
+ca={{ certpath }}
+cipher=aes-128-cbc
+connection-type=password
+dev=tun
+password-flags=0
+remote={{ host }}:{{ port }}
+remote-cert-tls=server
+reneg-seconds=0
+username={{ username }}
+service-type=org.freedesktop.NetworkManager.openvpn
+
+[vpn-secrets]
+password={{ password }}
+
+[ipv4]
+dns-search=
+method=auto
+
+[ipv6]
+addr-gen-mode=stable-privacy
+dns-search=
+ip6-privacy=0
+method=auto
+
+[proxy]
